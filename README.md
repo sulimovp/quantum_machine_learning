@@ -33,11 +33,13 @@ By the end of the course, you should be able to:
 |---|---|---|
 | I. Foundations | 1-3 | Qubits, gates, measurement, observables, software stack |
 | II. Data and Encoding | 4-5 | Classical ML recap, feature maps, quantum data encoding |
-| III. Variational QML | 6-9 | PQCs, training, gradients, kernels, hybrid models |
+| III. Variational QML | 6-9 | PQCs, gradients and barren plateaus, kernels, hybrid models |
 | IV. Advanced Topics | 10-12 | QCNNs, quantum transformers, reservoir computing, QPINNs |
-| V. Frontiers and Projects | 13-14 | Error mitigation, barren plateaus, final projects |
+| V. Hardware realism and projects | 13-14 | Mixed states, noise, error mitigation, final projects |
 
 ## Class-by-Class Plan
+
+Full detail (learning objectives, tasks, resources) is in `EVA_QML_Course_Program.md`.
 
 | Class | Topic | Practice Focus |
 |---|---|---|
@@ -47,13 +49,13 @@ By the end of the course, you should be able to:
 | 4 | Classical ML through a quantum lens | XOR, SVM kernels, PyTorch baseline |
 | 5 | Quantum encoding and feature maps | Basis/angle/amplitude encoding, kernels |
 | 6 | PQCs and variational algorithms | VQE-style circuits and optimization |
-| 7 | Training quantum circuits | Parameter-shift gradients, hybrid training |
+| 7 | Gradients, barren plateaus, optimisation (guest-lecture structure) | Parameter-shift, hybrid training, optional plateau demo |
 | 8 | Quantum kernels and classification | QSVM and decision boundaries |
 | 9 | Hybrid quantum-classical neural networks | Torch integration and model comparison |
 | 10 | Structured QML architectures | QCNN, quanvolution, quantum attention ideas |
 | 11 | Quantum reservoir and extreme learning | Time-series and financial examples |
 | 12 | Generative models, QAOA, QPINNs | Optimization and physics-informed workflows |
-| 13 | Training pathologies and mitigation | Barren plateaus, initialization, noise mitigation |
+| 13 | Noise, mixed states, error mitigation | Noise models, ZNE, measurement mitigation |
 | 14 | Final projects and outlook | Student presentations and synthesis |
 
 ## Assessment
