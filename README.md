@@ -1,8 +1,8 @@
 # EVA: Quantum Machine Learning
 
 This repository supports the EVA course in Quantum Machine Learning at ZHAW.
-It contains lecture materials, practice notebooks, and code examples used during
-the semester.
+It contains lecture demos, slide PDFs (classes 10–14), practice notebooks, and
+the semester course program.
 
 ## Course Format
 
@@ -64,11 +64,28 @@ Full detail (learning objectives, tasks, resources) is in `EVA_QML_Course_Progra
 
 ## Repository Structure
 
-- `lectures/` - lecture slides and plans
-- `notebooks/` - practice notebooks and coding sessions
-- `src/` - reusable Python code (as the project grows)
-- `experiments/` - reproducible experiment scripts
-- `tests/` - unit tests
+- `EVA_QML_Course_Program.md` — full semester plan, tasks, and resources
+- `lectures/lecture_NN/lecture_NN_demo.ipynb` — short in-class demos (same layout for all classes with a demo)
+- `lectures/lecture_NN/lecture_NN_slides.pdf` — Beamer slides for **classes 10–14** (PDF only; sources live in the teaching repository)
+- `notebooks/class_NN/` — weekly practice: `*_exercises.ipynb` and `*_solutions.ipynb` (Class 8 uses `lecture_08_qml_*.ipynb` filenames in this folder)
+
+## Slide PDFs (Docker)
+
+PDFs for lectures 10–14 are generated with TeX Live inside Docker so you do not need a local LaTeX install. The build reads `.tex` sources from a sibling checkout `../eva_qml` next to this repository (same parent folder as in the ZHAW teaching tree).
+
+**Windows (PowerShell), from `quantum_machine_learning/scripts/`:**
+
+```powershell
+.\build_slide_pdfs_docker.ps1
+```
+
+**Linux / macOS / Git Bash:**
+
+```bash
+bash scripts/build_slide_pdfs_docker.sh
+```
+
+Requires [Docker](https://docs.docker.com/get-docker/). Override the image with `TEXLIVE_IMAGE` if needed.
 
 ## Software Setup
 
@@ -77,7 +94,7 @@ conda create -n qml python=3.11 -y
 conda activate qml
 
 pip install "qiskit>=2.0,<3" "qiskit-aer>=0.15" "qiskit-machine-learning>=0.8"
-pip install "pennylane>=0.40" "pennylane-qiskit>=0.40"
+pip install "pennylane>=0.44" "pennylane-qiskit>=0.40"
 pip install "torch>=2.5" torchvision
 pip install scikit-learn matplotlib seaborn jupyter
 ```
